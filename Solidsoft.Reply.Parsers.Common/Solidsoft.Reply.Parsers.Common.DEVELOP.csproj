@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>11.0</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Supporting library for Solidsoft Reply parsers</Title>
+    <Authors>cnayoung</Authors>
+    <Company>Solidsoft Reply Ltd.</Company>
+    <Description>This library supports parsers built by Solidsoft Reply.</Description>
+    <Copyright>©2023 Solidsoft Reply</Copyright>
+    <PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.Parsers.Common</RepositoryUrl>
+    <PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AssemblyName>$(MSBuildProjectName.Replace(".DEVELOP",""))</AssemblyName>
+    <RootNamespace>$(MSBuildProjectName.Replace(".DEVELOP","").Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Solidsoft Reply - LOGO Square_small.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
