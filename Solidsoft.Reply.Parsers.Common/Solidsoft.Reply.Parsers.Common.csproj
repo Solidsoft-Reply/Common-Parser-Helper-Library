@@ -11,11 +11,20 @@
     <Company>Solidsoft Reply Ltd.</Company>
     <Description>This library supports parsers built by Solidsoft Reply.</Description>
     <Copyright>©2023 Solidsoft Reply</Copyright>
-    <PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.Parsers.Common</RepositoryUrl>
+    <PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
     <PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Description>
+		This library supports parsers built by Solidsoft Reply.
+
+		Latest Release Notes:
+		--------------
+		$(PackageReleaseNotes)
+    </Description>
+	<Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
