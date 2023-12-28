@@ -71,7 +71,7 @@ public class PreprocessorException : Exception
     ///   The message.
     /// </param>
     /// <param name="isFatal">
-    ///   Indicates whether the exception is fatal..
+    ///   Indicates whether the exception is fatal.
     /// </param>
     public PreprocessorException(int errorNumber, string message, bool isFatal)
         : base(message)
