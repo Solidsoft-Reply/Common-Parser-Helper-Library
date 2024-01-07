@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
-    <LangVersion>11.0</LangVersion>
+    <TargetFrameworks>net7.0;netstandard2.0;net8.0</TargetFrameworks>
+    <LangVersion>12.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -25,9 +25,14 @@
 		$(PackageReleaseNotes)
     </Description>
 	<Version>1.0.0</Version>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+	</ItemGroup>
+
+	<ItemGroup>
     <None Include="..\..\..\..\OneDrive - London Living\Mega\Logos\Solidsoft Reply - LOGO Square_small.jpg">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
