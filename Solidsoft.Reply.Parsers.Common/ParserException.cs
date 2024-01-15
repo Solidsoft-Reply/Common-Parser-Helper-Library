@@ -76,6 +76,7 @@ public class ParserException : Exception {
     /// </summary>
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
+    [Obsolete("Formatter serialisation has been deprecated in .NET.")]
     protected ParserException(SerializationInfo info, StreamingContext context) : base(info, context) {
     }
 
