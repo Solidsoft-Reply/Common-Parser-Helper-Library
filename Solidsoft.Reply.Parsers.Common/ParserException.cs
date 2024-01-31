@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Gs1ParserException.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2022-2023 Solidsoft Reply Ltd.  All rights reserved.
+//   (c) 2022-2024 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
 // <license>
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -76,7 +76,9 @@ public class ParserException : Exception {
     /// </summary>
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
+#if NET5_0_OR_GREATER
     [Obsolete("Formatter serialisation has been deprecated in .NET.")]
+#endif
     protected ParserException(SerializationInfo info, StreamingContext context) : base(info, context) {
     }
 
