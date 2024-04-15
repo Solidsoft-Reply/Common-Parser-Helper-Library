@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="BarcodeException.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="PreprocessorException.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // A preprocessor exception.
 // </summary>
@@ -29,15 +27,13 @@ using System.Runtime.Serialization;
 ///   A preprocessor exception.
 /// </summary>
 [Serializable]
-public class PreprocessorException : Exception
-{
+public class PreprocessorException : Exception {
     /// <summary>
     ///   Initializes a new instance of the <see cref="PreprocessorException" /> class.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
     // ReSharper disable once MemberCanBeProtected.Global
-    public PreprocessorException()
-    {
+    public PreprocessorException() {
     }
 
     /// <summary>
@@ -46,8 +42,7 @@ public class PreprocessorException : Exception
     /// <param name="message">The exception message.</param>
     // ReSharper disable once MemberCanBeProtected.Global
     public PreprocessorException(string message)
-        : base(message)
-    {
+        : base(message) {
     }
 
     /// <summary>
@@ -57,8 +52,7 @@ public class PreprocessorException : Exception
     /// <param name="innerException">The inner exception.</param>
     // ReSharper disable once MemberCanBeProtected.Global
     public PreprocessorException(string message, Exception innerException)
-        : base(message, innerException)
-    {
+        : base(message, innerException) {
     }
 
     /// <summary>
@@ -74,8 +68,7 @@ public class PreprocessorException : Exception
     ///   Indicates whether the exception is fatal.
     /// </param>
     public PreprocessorException(int errorNumber, string message, bool isFatal)
-        : base(message)
-    {
+        : base(message) {
         ErrorNumber = errorNumber;
         IsFatal = isFatal;
     }
@@ -86,10 +79,12 @@ public class PreprocessorException : Exception
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
 #if NET5_0_OR_GREATER
+#pragma warning disable S1133 // Deprecated code should be removed
     [Obsolete("Formatter serialisation has been deprecated in .NET.")]
+#pragma warning restore S1133 // Deprecated code should be removed
 #endif
-    protected PreprocessorException(SerializationInfo info, StreamingContext context) : base(info, context)
-    {
+    protected PreprocessorException(SerializationInfo info, StreamingContext context)
+        : base(info, context) {
     }
 
     /// <summary>

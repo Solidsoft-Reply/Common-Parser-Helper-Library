@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Solidsoft.Reply.Parsers.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Solidsoft.Reply.Parsers.Common.IResolvedEntity">
+            <summary>
+                Represents a resolved entity.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.CharacterPosition">
+            <summary>
+                Gets the character position where the error occurred.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.DataTitle">
+            <summary>
+                Gets the application identifier data title.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.Description">
+            <summary>
+                Gets the description of the application identifier.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.Entity">
+            <summary>
+                Gets the identifier entity.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.Exceptions">
+            <summary>
+                Gets the exceptions raised during attempted entity resolution.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.Identifier">
+            <summary>
+                Gets the identifier, as represented in the barcode.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.InverseExponent">
+            <summary>
+                Gets the implied decimal point position in the value.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.IsError">
+            <summary>
+                Gets a value indicating whether resolution resulted in one or more errors.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.IsFatal">
+            <summary>
+                Gets a value indicating whether the error is fatal (further parsing is aborted).
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.IResolvedEntity.Value">
+            <summary>
+                Gets the value associated with the application identifier.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.IResolvedEntity.AddException(Solidsoft.Reply.Parsers.Common.ParserException)">
+            <summary>
+                Adds a resolver exception.
+            </summary>
+            <param name="parserException">The resolver exception to be added.</param>
+        </member>
+        <member name="T:Solidsoft.Reply.Parsers.Common.ParserException">
+            <summary>
+                An exception raised by a parser.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.ParserException.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.ParserException" /> class.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.ParserException.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.ParserException" /> class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.ParserException.#ctor(System.String,System.Exception)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.ParserException" /> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.ParserException.#ctor(System.Int32,System.String,System.Boolean,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.ParserException" /> class.
+            </summary>
+            <param name="errorNumber">The error number.</param>
+            <param name="message">The error message.</param>
+            <param name="isFatal">Indicates whether the exception is fatal. </param>
+            <param name="offset">The character position of the exception.</param>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.ParserException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.ParserException" /> class.
+            </summary>
+            <param name="info">The serialization information.</param>
+            <param name="context">The streaming context.</param>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.ParserException.ErrorNumber">
+            <summary>
+                Gets the error number.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.ParserException.IsFatal">
+            <summary>
+                Gets a value indicating whether the exception is fatal.  Fatality means that the
+                parser must abandon the attempt to parse the exception.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.ParserException.Offset">
+            <summary>
+                Gets the offset position of the exception.
+            </summary>
+        </member>
+        <member name="T:Solidsoft.Reply.Parsers.Common.PreprocessorException">
+            <summary>
+              A preprocessor exception.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.PreprocessorException.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.PreprocessorException" /> class.
+            </summary>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.PreprocessorException.#ctor(System.String)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.PreprocessorException" /> class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.PreprocessorException.#ctor(System.String,System.Exception)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.PreprocessorException" /> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.PreprocessorException.#ctor(System.Int32,System.String,System.Boolean)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.PreprocessorException" /> class.
+            </summary>
+            <param name="errorNumber">
+              The error number.
+            </param>
+            <param name="message">
+              The message.
+            </param>
+            <param name="isFatal">
+              Indicates whether the exception is fatal.
+            </param>
+        </member>
+        <member name="M:Solidsoft.Reply.Parsers.Common.PreprocessorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Solidsoft.Reply.Parsers.Common.PreprocessorException" /> class.
+            </summary>
+            <param name="info">The serialization information.</param>
+            <param name="context">The streaming context.</param>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.PreprocessorException.ErrorNumber">
+            <summary>
+              Gets the error number.
+            </summary>
+        </member>
+        <member name="P:Solidsoft.Reply.Parsers.Common.PreprocessorException.IsFatal">
+            <summary>
+              Gets a value indicating whether the error is fatal (further parsing is aborted).
+            </summary>
+        </member>
+    </members>
+</doc>
