@@ -1,2 +1,1 @@
-# Solidsoft.Reply.Parsers.Common
-Supports parsers provided by Solidsoft Reply.
+﻿This library provides commonality and abstraction for Solidsoft Reply parsers.  It is specifically used by the base parsers provided for parsing barcode scanner data.  These include the GS1 AI parser and the ANSI MH 10.8.2 DI parser. 
