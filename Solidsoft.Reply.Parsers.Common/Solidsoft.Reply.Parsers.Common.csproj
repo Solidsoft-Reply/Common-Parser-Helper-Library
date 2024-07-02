@@ -44,11 +44,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="..\DEVELOPER-NOTICE.txt" Link="LicenceAndNotices\DEVELOPER-NOTICE.txt" />
-    <Content Include="..\LICENSE.txt" Link="LicenceAndNotices\LICENSE.txt" />
+    <Content Include="..\DEVELOPER-NOTICE.txt" Link="Notices\DEVELOPER-NOTICE.txt" />
   </ItemGroup>
+	
+		<ItemGroup>
+		<None Include="../LICENSE.txt" Pack="true" PackagePath="" />
+		<None Include="../README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 
-	<ItemGroup>
+
+		<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
 		  <PrivateAssets>all</PrivateAssets>
@@ -61,11 +66,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\README.md" Link="LicenceAndNotices\README.md" />
   </ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="LicenceAndNotices\" />
+	  <Folder Include="Notices\" />
 	</ItemGroup>
 
 </Project>
