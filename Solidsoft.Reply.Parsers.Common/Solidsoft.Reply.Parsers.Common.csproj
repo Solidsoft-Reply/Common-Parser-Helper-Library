@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;net7.0;netstandard2.0</TargetFrameworks>
-    <LangVersion>12.0</LangVersion>
+    <LangVersion>preview</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -10,14 +10,14 @@
     <Authors>cnayoung</Authors>
     <Company>Solidsoft Reply Ltd.</Company>
     <Description>This library supports parsers built by Solidsoft Reply.</Description>
-    <Copyright>©2023 Solidsoft Reply</Copyright>
+    <Copyright>©2025 Solidsoft Reply</Copyright>
     <RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.Parsers.Common</RepositoryUrl>
     <PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
     <PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<PackageReleaseNotes>
-		1) Extended target platform reach to .NET Standard 2.0, .NET 7.0 and .NET 8.0.
+		1) Added support for high-performance zero-allocation use.
 	</PackageReleaseNotes>
     <Description>
 		This library supports parsers built by Solidsoft Reply.
@@ -26,7 +26,7 @@
 		--------------
 		$(PackageReleaseNotes)
     </Description>
-	<Version>1.0.1</Version>
+	<Version>1.0.2</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

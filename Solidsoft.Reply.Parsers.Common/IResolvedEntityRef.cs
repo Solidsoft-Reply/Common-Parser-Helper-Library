@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IResolvedEntity.cs" company="Solidsoft Reply Ltd">
+// <copyright file="IResolvedEntityRef.cs" company="Solidsoft Reply Ltd">
 // Copyright (c) 2018-2025 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,8 +17,7 @@
 // Represents a resolved entity.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-[assembly: CLSCompliant(true)]
+#if NET6_0_OR_GREATER
 
 namespace Solidsoft.Reply.Parsers.Common;
 
@@ -27,7 +26,10 @@ using System.Collections.Generic;
 /// <summary>
 ///     Represents a resolved entity.
 /// </summary>
-public interface IResolvedEntity {
+/// <remarks>
+///     A version of the IResolvedEntity interface that supports the use of ref structs and spans to avoid heap allocations.
+/// </remarks>
+public interface IResolvedEntityRef {
     /// <summary>
     ///     Gets the character position where the error occurred.
     /// </summary>
@@ -36,12 +38,12 @@ public interface IResolvedEntity {
     /// <summary>
     ///     Gets the application identifier data title.
     /// </summary>
-    string DataTitle { get; }
+    Span<char> DataTitle { get; }
 
     /// <summary>
     ///     Gets the description of the application identifier.
     /// </summary>
-    string Description { get; }
+    Span<char> Description { get; }
 
     /// <summary>
     ///     Gets the identifier entity.
@@ -56,7 +58,7 @@ public interface IResolvedEntity {
     /// <summary>
     ///     Gets the identifier, as represented in the barcode.
     /// </summary>
-    string Identifier { get; }
+    Span<char> Identifier { get; }
 
     /// <summary>
     ///     Gets the implied decimal point position in the value.
@@ -76,7 +78,7 @@ public interface IResolvedEntity {
     /// <summary>
     ///     Gets the value associated with the application identifier.
     /// </summary>
-    string Value { get; }
+    Span<char> Value { get; }
 
     /// <summary>
     ///     Adds a resolver exception.
@@ -86,3 +88,4 @@ public interface IResolvedEntity {
     // ReSharper disable once UnusedMember.Global
     void AddException(ParserException parserException);
 }
+#endif

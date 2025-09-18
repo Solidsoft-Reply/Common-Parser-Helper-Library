@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="ParserException.cs" company="Solidsoft Reply Ltd">
-// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
+// Copyright (c) 2018-2025 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -63,11 +63,8 @@ public class ParserException : Exception {
     /// <param name="offset">The character position of the exception.</param>
     // ReSharper disable once StyleCop.SA1642
     public ParserException(int errorNumber, string message, bool isFatal, int offset = 0)
-        : base(message) {
-        ErrorNumber = errorNumber;
-        IsFatal = isFatal;
-        Offset = offset;
-    }
+        : base(message)
+        => (ErrorNumber, IsFatal, Offset) = (errorNumber, isFatal, offset);
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="ParserException" /> class.
