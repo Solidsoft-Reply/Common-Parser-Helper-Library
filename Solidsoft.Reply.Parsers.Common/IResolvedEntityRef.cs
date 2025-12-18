@@ -31,7 +31,7 @@ using System.Collections.Generic;
 /// </remarks>
 public interface IResolvedEntityRef {
     /// <summary>
-    ///     Gets the character position where the error occurred.
+    ///     Gets the position of the application identifier within the data.
     /// </summary>
     int CharacterPosition { get; }
 

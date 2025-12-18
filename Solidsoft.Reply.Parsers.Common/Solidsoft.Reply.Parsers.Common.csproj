@@ -29,6 +29,7 @@
 	<Version>1.0.2</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -61,9 +62,9 @@
 		</PackageReference>
 	</ItemGroup>
 
-	<ItemGroup>
-    <None Include="..\..\..\..\OneDrive - London Living\Mega\Logos\Solidsoft Reply - LOGO Square_small.jpg">
-      <Pack>True</Pack>
+  <ItemGroup>
+    <None Include=".\Solidsoft Reply - LOGO Square_small.jpg">
+		<Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>

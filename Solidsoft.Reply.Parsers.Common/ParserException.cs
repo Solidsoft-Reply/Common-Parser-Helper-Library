@@ -57,14 +57,15 @@ public class ParserException : Exception {
     /// <summary>
     ///     Initializes a new instance of the <see cref="ParserException" /> class.
     /// </summary>
+    /// <param name="identifier">The entity identifier.</param>
     /// <param name="errorNumber">The error number.</param>
     /// <param name="message">The error message.</param>
     /// <param name="isFatal">Indicates whether the exception is fatal. </param>
     /// <param name="offset">The character position of the exception.</param>
     // ReSharper disable once StyleCop.SA1642
-    public ParserException(int errorNumber, string message, bool isFatal, int offset = 0)
+    public ParserException(string identifier, int errorNumber, string message, bool isFatal, int offset = 0)
         : base(message)
-        => (ErrorNumber, IsFatal, Offset) = (errorNumber, isFatal, offset);
+        => (Identifier, ErrorNumber, IsFatal, Offset) = (identifier, errorNumber, isFatal, offset);
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="ParserException" /> class.
@@ -81,7 +82,13 @@ public class ParserException : Exception {
     }
 
     /// <summary>
-    ///     Gets the error number.
+    ///     Gets the identifier.
+    /// </summary>
+    public string Identifier { get; }
+
+
+    /// <summary>
+    ///     Gets the data entity identifier.
     /// </summary>
     public int ErrorNumber { get; }
 

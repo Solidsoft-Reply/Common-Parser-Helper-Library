@@ -29,7 +29,7 @@ using System.Collections.Generic;
 /// </summary>
 public interface IResolvedEntity {
     /// <summary>
-    ///     Gets the character position where the error occurred.
+    ///     Gets the position of the application identifier within the data.
     /// </summary>
     int CharacterPosition { get; }
 
