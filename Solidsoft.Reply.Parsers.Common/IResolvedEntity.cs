@@ -22,8 +22,6 @@
 
 namespace Solidsoft.Reply.Parsers.Common;
 
-using System.Collections.Generic;
-
 /// <summary>
 ///     Represents a resolved entity.
 /// </summary>

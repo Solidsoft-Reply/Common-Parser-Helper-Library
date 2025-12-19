@@ -20,7 +20,6 @@
 
 namespace Solidsoft.Reply.Parsers.Common;
 
-using System;
 using System.Runtime.Serialization;
 
 /// <summary>

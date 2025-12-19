@@ -17,11 +17,10 @@
 // Represents a resolved entity.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
 #if NET6_0_OR_GREATER
 
 namespace Solidsoft.Reply.Parsers.Common;
-
-using System.Collections.Generic;
 
 /// <summary>
 ///     Represents a resolved entity.

@@ -17,7 +17,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<PackageReleaseNotes>
-		1) Added support for high-performance zero-allocation use.
+		1) Updated ParserException class to hold data entity identifier.
 	</PackageReleaseNotes>
     <Description>
 		This library supports parsers built by Solidsoft Reply.
@@ -26,7 +26,7 @@
 		--------------
 		$(PackageReleaseNotes)
     </Description>
-	<Version>1.0.2</Version>
+	<Version>1.0.3</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
