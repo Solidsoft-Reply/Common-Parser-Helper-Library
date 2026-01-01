@@ -83,8 +83,7 @@ public class ParserException : Exception {
     /// <summary>
     ///     Gets the identifier.
     /// </summary>
-    public string Identifier { get; }
-
+    public string? Identifier { get; }
 
     /// <summary>
     ///     Gets the data entity identifier.
