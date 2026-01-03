@@ -60,6 +60,11 @@ public interface IResolvedEntityRef {
     Span<char> Identifier { get; }
 
     /// <summary>
+    ///     Gets the index of the element string sequence. This is always 0 unless using ParseMulti().
+    /// </summary>
+    int Index { get; }
+
+    /// <summary>
     ///     Gets the implied decimal point position in the value.
     /// </summary>
     int? InverseExponent { get; }
@@ -70,9 +75,21 @@ public interface IResolvedEntityRef {
     bool IsError { get; }
 
     /// <summary>
+    ///     Gets a value indicating whether the application identifier is a fixed-width field,.
+    ///     This includes fixed width values for AIs that do not have a pre-defined length.
+    /// </summary>
+    // ReSharper disable once MemberCanBePrivate.Global
+    bool IsFixedWidth { get; }
+
+    /// <summary>
     ///     Gets a value indicating whether the error is fatal (further parsing is aborted).
     /// </summary>
     bool IsFatal { get; }
+
+    /// <summary>
+    ///     Gets the sequence number..
+    /// </summary>
+    int? Sequence { get; }
 
     /// <summary>
     ///     Gets the value associated with the application identifier.
