@@ -76,9 +76,7 @@ public class PreprocessorException : Exception {
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
 #if NET5_0_OR_GREATER
-#pragma warning disable S1133 // Deprecated code should be removed
     [Obsolete("Formatter serialisation has been deprecated in .NET.")]
-#pragma warning restore S1133 // Deprecated code should be removed
 #endif
     protected PreprocessorException(SerializationInfo info, StreamingContext context)
         : base(info, context) {
